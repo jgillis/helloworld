@@ -40,7 +40,7 @@ class Averager:
 
     @property
     def N(self):
-        return len(self.mylist)
+        return len(self.mylist)-1
 
 if __name__ == '__main__':
   # Demonstration
