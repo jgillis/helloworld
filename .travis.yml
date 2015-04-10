@@ -7,7 +7,7 @@ matrix:
     - env: FOO=789
     
 before_install:
-  - if [[ $TRAVIS_BRANCH == 'master' ]]; then echo 'hoorah' fi
+  - test $TRAVIS_BRANCH == 'master' && echo 'hoorah' && false
   
   
 script: python -c "import os; print os.environ['FOO']"
