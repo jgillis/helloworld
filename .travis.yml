@@ -5,6 +5,9 @@ matrix:
     - env: FOO=456
       script: python -c "import os; print os.environ['FOO']"
     - env: FOO=789
+    
+before_install:
+  - if [[ $TRAVIS_BRANCH == 'master' ]]; then echo 'hoorah' fi
   
   
 script: python -c "import os; print os.environ['FOO']"
