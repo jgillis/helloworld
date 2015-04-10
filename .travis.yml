@@ -1,6 +1,10 @@
 matrix:
   include: 
     - env: FOO=123
-      script: python -c "import sys; print sys.environ['FOO']" 
-    - env: BAR=123
-      script: python -c "import sys; print sys.environ['FOO']"
+      script: python -c "import os; print os.environ['FOO']" 
+    - env: FOO=456
+      script: python -c "import os; print os.environ['FOO']"
+    - env: FOO=789
+  
+  
+script: python -c "import os; print os.environ['FOO']"
